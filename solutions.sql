@@ -68,7 +68,7 @@ WHERE favorite_color IN ('orange', 'green', 'blue');
 
 -- 14.
 SELECT * FROM person
-WHERE favorite_color in ('yellwo', 'purple');
+WHERE favorite_color in ('yellow', 'purple');
 
 
 -- Table - orders
@@ -150,7 +150,7 @@ WHERE reports_to = 2;
 
 -- 5. 
 SELECT COUNT(*) FROM employee
-WHERE CITY = 'Lethbridge';
+WHERE city = 'Lethbridge';
 
 
 -- Table - invoice
