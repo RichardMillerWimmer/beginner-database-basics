@@ -104,3 +104,81 @@ WHERE person_id = 1;
 
 
 -- Table - artist
+
+-- 1. 
+INSERT INTO artist (name)
+VALUES 
+	('Mutemath'),
+  ('Norma Jean'),
+  ('Silent Planet');
+
+-- 2. 
+SELECT * FROM artist
+ORDER BY name DESC LIMIT 10;
+
+-- 3. 
+SELECT * FROM artist
+ORDER BY name LIMIT 5;
+
+-- 4. 
+SELECT * FROM artist
+WHERE name LIKE 'Black%';
+
+-- 5. 
+SELECT * FROM artist
+WHERE name LIKE '%Black%';
+
+
+-- Table - employee
+
+-- 1. 
+SELECT first_name, last_name FROM employee
+WHERE city = 'Calgary';
+
+-- 2. 
+SELECT MAX(birth_date) FROM employee;
+
+-- 3. 
+SELECT MIN(birth_date) FROM employee;
+
+-- 4. 
+SELECT * FROM employee
+WHERE first_name = 'Nancy' AND last_name = 'Edwards';
+
+SELECT * FROM employee
+WHERE reports_to = 2;
+
+-- 5. 
+SELECT COUNT(*) FROM employee
+WHERE CITY = 'Lethbridge';
+
+
+-- Table - invoice
+
+-- 1. 
+SELECT COUNT(*) FROM invoice 
+WHERE billing_country = 'USA';
+
+-- 2. 
+SELECT MAX(total) FROM invoice;
+
+-- 3. 
+SELECT MIN(total) FROM invoice;
+
+-- 4. 
+SELECT * FROM invoice 
+WHERE total > 5;
+
+-- 5. 
+SELECT COUNT(*) FROM invoice
+WHERE total < 5;
+
+-- 6.
+SELECT COUNT(*) FROM invoice 
+WHERE billing_state IN ('CA', 'TX', 'AZ');
+
+-- 7. 
+SELECT AVG(total) FROM invoice;
+
+-- 8.
+SELECT SUM(total) FROM invoice;
